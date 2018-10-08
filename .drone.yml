@@ -1,4 +1,8 @@
 pipeline:
   build: 
     image: openjdk:8
-    commands: ./gradlew clean build
+    commands: 
+      - ./gradlew test
+      - ./gradlew clean build
+  when:
+    branch: master
